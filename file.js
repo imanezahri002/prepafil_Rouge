@@ -752,150 +752,150 @@ const employees = [
 ];
 
 
-// function hasInactiveEmployees(employees) {
+function hasInactiveEmployees(employees) {
 
-//   for (let i = 0; i < employees.length; i++) {
-//     if (!employees[i]['isActive']) {
-//       console.log(employees[i]['lastName'], "is innactive")
-//     }
-//   }
-// }
+  for (let i = 0; i < employees.length; i++) {
+    if (!employees[i]['isActive']) {
+      console.log(employees[i]['lastName'], "is innactive")
+    }
+  }
+}
 
-// hasInactiveEmployees(employees);
+hasInactiveEmployees(employees);
 
-// function calculateAverageAge(employees){
-//   let sum=0;
-//   let moy=0;
-//   for(let i=0;i<employees.length;i++){
-//       sum+=employees[i]['age'];
+function calculateAverageAge(employees){
+  let sum=0;
+  let moy=0;
+  for(let i=0;i<employees.length;i++){
+      sum+=employees[i]['age'];
 
-//   }
-//   return  moy=sum/employees.length;
+  }
+  return  moy=sum/employees.length;
 
-// }
-// console.log(calculateAverageAge(employees));
+}
+console.log(calculateAverageAge(employees));
 
-// function getHighestPaidEmployee(employees){
+function getHighestPaidEmployee(employees){
 
-//   let max=employees[0];
+  let max=employees[0];
 
-//   for(let i=1;i<employees.length;i++){
-//       if(max['age']<employees[i]['age']){
-//         max = employees[i];
-//       }
-//     }
-//     return max;
-// }
-// console.log(getHighestPaidEmployee(employees));
+  for(let i=1;i<employees.length;i++){
+      if(max['age']<employees[i]['age']){
+        max = employees[i];
+      }
+    }
+    return max;
+}
+console.log(getHighestPaidEmployee(employees));
 
-// function countEmployeesInDepartment(employees){
-//   let count =0;
-//   for(let i=0;i<employees.length;i++){
-//       if(employees[i]['department']=="Développement"){
-//         count++;
-//       }
-//   }
-//   return count;
-// }
-// console.log(countEmployeesInDepartment(employees));
+function countEmployeesInDepartment(employees){
+  let count =0;
+  for(let i=0;i<employees.length;i++){
+      if(employees[i]['department']=="Développement"){
+        count++;
+      }
+  }
+  return count;
+}
+console.log(countEmployeesInDepartment(employees));
 
-// function getUniqueDepartments(employees){
-//   let exist = false;
-//   let arr=[];
-//   arr.push(employees[0]['department'])
+function getUniqueDepartments(employees){
+  let exist = false;
+  let arr=[];
+  arr.push(employees[0]['department'])
 
-//   for(let i=1;i<employees.length;i++){
-//     for(let j=0;j<arr.length;j++){
+  for(let i=1;i<employees.length;i++){
+    for(let j=0;j<arr.length;j++){
 
-//       if(employees[i]['department'] == arr[j]){
-//         exist=true;
-//       }
-//     }
-//     if(!exist){
-//       arr.push(employees[i]['department']);
-//     }else{
-//       exist = false
-//     }
-//   }
-//   return arr;
-// }
+      if(employees[i]['department'] == arr[j]){
+        exist=true;
+      }
+    }
+    if(!exist){
+      arr.push(employees[i]['department']);
+    }else{
+      exist = false
+    }
+  }
+  return arr;
+}
 
-// console.log(getUniqueDepartments(employees));
+console.log(getUniqueDepartments(employees));
 
-// function getdepartment(employees){
-//   let department = {};
+function getdepartment(employees){
+  let department = {};
 
-//   for (let i = 0; i < employees.length; i++) {
+  for (let i = 0; i < employees.length; i++) {
 
-//     department[employees[i]['department']] = ''
-//   }
-//   return department
-// }
-//  console.log(getdepartment(employees))
+    department[employees[i]['department']] = ''
+  }
+  return department
+}
+ console.log(getdepartment(employees))
 
-// function hasEmployeesWithoutProjects(employees){
-//   let exist=false;
-//   for(let i=0;i<employees.length;i++){
-//     if(employees[i]['projects'].length==0){
-//        exist=employees[i];
-//     }
-//   }
-//   return exist;
-// }
-// console.log(hasEmployeesWithoutProjects(employees));
+function hasEmployeesWithoutProjects(employees){
+  let exist=false;
+  for(let i=0;i<employees.length;i++){
+    if(employees[i]['projects'].length==0){
+       exist=employees[i];
+    }
+  }
+  return exist;
+}
+console.log(hasEmployeesWithoutProjects(employees));
 
-// function countEnglishSpeakingEmployees(employees) {
+function countEnglishSpeakingEmployees(employees) {
 
-//   let count = 0;
-//   for (let i = 0; i < employees.length; i++) {
-//     for (let j = 0; j < employees[i].languages.length; j++) {
-//       if (employees[i].languages[j] == "English") {
-//         count++;
-//       }
-//     }
-//   }
-//   return count;
+  let count = 0;
+  for (let i = 0; i < employees.length; i++) {
+    for (let j = 0; j < employees[i].languages.length; j++) {
+      if (employees[i].languages[j] == "English") {
+        count++;
+      }
+    }
+  }
+  return count;
 
-// }
-// console.log(countEnglishSpeakingEmployees(employees));
+}
+console.log(countEnglishSpeakingEmployees(employees));
 
-// function getEmployeesByProject(employees){
-//   let arrEmp=[]
-//   for(let i=0;i<employees.length;i++){
-//     for(let j=0;j<employees[i].projects.length;j++){
+function getEmployeesByProject(employees){
+  let arrEmp=[]
+  for(let i=0;i<employees.length;i++){
+    for(let j=0;j<employees[i].projects.length;j++){
 
-//       if(employees[i].projects[j]=="Project Gamma"){
-//         arrEmp.push(employees[i]);
-//       }
-//     }
-//   }
-//   return arrEmp;
-// }
-// console.log(getEmployeesByProject(employees));
+      if(employees[i].projects[j]=="Project Gamma"){
+        arrEmp.push(employees[i]);
+      }
+    }
+  }
+  return arrEmp;
+}
+console.log(getEmployeesByProject(employees));
 
-// function getEmployeesWithMoreThanTwoSkills(employees){
-//   let arr=[];
-//   for(let i=0;i<employees.length;i++){
-//       for(let j=0;j<employees[i].skills.length;j++){
-//           if(employees[i].skills.length>2){
-//               arr.push(employees[i]);
-//           }
-//       }
-//   }
-//   return arr;
-// }
-// console.log(getEmployeesWithMoreThanTwoSkills(employees));
+function getEmployeesWithMoreThanTwoSkills(employees){
+  let arr=[];
+  for(let i=0;i<employees.length;i++){
+      for(let j=0;j<employees[i].skills.length;j++){
+          if(employees[i].skills.length>2){
+              arr.push(employees[i]);
+          }
+      }
+  }
+  return arr;
+}
+console.log(getEmployeesWithMoreThanTwoSkills(employees));
 
-// function getEmployeesByLastNameInitial(employees){
-//   let arr=[];
-//   for(let i=0;i<employees.length;i++){
-//     if(employees[i]['lastName'][0]=='L'){
-//         arr.push(employees[i]);
-//     }
-//   }
-//   return arr;
-// }
-// console.log(getEmployeesByLastNameInitial(employees))
+function getEmployeesByLastNameInitial(employees){
+  let arr=[];
+  for(let i=0;i<employees.length;i++){
+    if(employees[i]['lastName'][0]=='L'){
+        arr.push(employees[i]);
+    }
+  }
+  return arr;
+}
+console.log(getEmployeesByLastNameInitial(employees))
 
 
 
